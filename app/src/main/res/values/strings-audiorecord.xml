@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ar_feed_sound_press_record">按住录音</string>
+    <string name="ar_feed_sound_slide_cancel">上滑取消</string>
+    <string name="ar_feed_sound_cancel">松手取消</string>
+    <string name="ar_record_audio_again">请再次按下语音键</string>
+    <string name="ar_record_audio_fail">您拒绝了录音权限,请在设置中打开</string>
+
+</resources>

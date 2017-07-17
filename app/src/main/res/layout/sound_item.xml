@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_sound_item"
+    android:layout_width="160dp"
+    android:layout_height="47dp"
+    android:background="#AFAFAF">
+
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="47dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ar_sound_item_bg_new"/>
+
+    <ImageView
+        android:id="@+id/iv_sound_horn"
+        android:layout_width="28dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="19dp"
+        android:src="@drawable/ar_sound_play_animation"/>
+
+    <TextView
+        android:id="@+id/tv_sound_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/iv_sound_horn"
+        android:text="24'"
+        android:textColor="@color/white"
+        android:textSize="14dp"/>
+
+</RelativeLayout>

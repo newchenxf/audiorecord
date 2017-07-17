@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/edit_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:hint="Hello World!"
+        android:gravity="start"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="#999999"/>
+
+
+    <com.chenxf.audiorecord.ui.view.CommonSoundItemView
+        android:id="@+id/pp_sound_item_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="56dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp"
+        android:layout_below="@+id/edit_txt"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/pp_iv_abandon_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/pp_sound_item_view"
+        android:layout_alignTop="@id/pp_sound_item_view"
+        android:src="@drawable/ar_delete_audio"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ar_background_selector"
+        android:visibility="visible"
+        android:layout_below="@+id/edit_txt"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <ImageView
+                android:id="@+id/iv_sound"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ar_item_sound"
+                />
+
+            <TextView
+                android:id="@+id/tv_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_sound"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="录音"
+                android:textColor="#555555"
+                android:textSize="14dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

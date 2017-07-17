@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="#86000000"
+                android:id="@+id/record_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_record_audio"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="289dp">
+        <ImageView
+            android:id="@+id/close_record"
+            android:src="@drawable/ar_keyboard_btn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.chenxf.audiorecord.ui.view.RecordAudioView
+            android:id="@+id/iv_recording"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ar_record_audio_btn_selector"/>
+        <TextView
+            android:id="@+id/record_tips"
+            android:text="@string/ar_feed_sound_press_record"
+            android:layout_above="@+id/iv_recording"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ff9c00"
+            android:textSize="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.chenxf.audiorecord.ui.view.LineWaveVoiceView
+            android:id="@+id/horvoiceview"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:voiceLineColor="@color/horvoice_text_color"
+            app:voiceTextColor="@color/color_666666"
+            app:voiceTextSize="14dp"
+            app:voiceLineWidth="3dp"
+            android:visibility="invisible"
+            android:layout_above="@id/record_tips"/>
+
+        <TextView
+            android:id="@+id/reply_name"
+            android:layout_marginTop="18dp"
+            android:visibility="invisible"
+            android:maxEms="15"
+            android:ellipsize="end"
+            android:layout_centerHorizontal="true"
+            android:textSize="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pp_layout_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_record_audio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:background="@drawable/ar_cancel_layout_background"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ar_feed_sound_cancel"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/layout_record_audio"
+        android:background="#e6e6e6"/>
+
+    <View
+        android:id="@+id/audio_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_above="@id/layout_record_audio"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
